@@ -1,0 +1,49 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   mat1 ~ edges + mutual + mutual("PersonSmoke") + asymmetric("PersonSmoke") + 
+    gwidegree(fixed = F) + gwodegree(fixed = F) + gwesp(0.25, 
+    fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("Ethnic") + 
+    nodeofactor("Ethnic") + nodeifactor("Ethnic") + nodematch("PersonSmoke") + 
+    nodeifactor("PersonSmoke", base = 1) + nodeofactor("PersonSmoke", 
+    base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                          Estimate Std. Error MCMC % p-value    
+edges                     -3.10230    0.61271     NA  <1e-04 ***
+mutual                     2.32533    0.54658     NA  <1e-04 ***
+mutual.PersonSmoke         1.60941    0.20339     NA  <1e-04 ***
+asymmetric.PersonSmoke     0.67317    0.27801     NA  0.0155 *  
+gwidegree                 -0.02475    0.07502     NA  0.7415    
+gwidegree.decay           -0.87053    0.15834     NA  <1e-04 ***
+gwodegree                 -2.84398    1.48448     NA  0.0554 .  
+gwodegree.decay           -0.17571    0.30086     NA  0.5592    
+gwesp.fixed.0.25           1.50383    0.19212     NA  <1e-04 ***
+gwdsp.fixed.0.25          -0.26205    0.04564     NA  <1e-04 ***
+nodematch.Gender           0.64623    0.53196     NA  0.2245    
+nodeifactor.Gender.2      -0.40127    0.59369     NA  0.4991    
+nodeofactor.Gender.2      -0.42608    0.50238     NA  0.3964    
+nodematch.Ethnic           0.23218    0.20223     NA  0.2510    
+nodeofactor.Ethnic.2      -0.08247    0.27532     NA  0.7645    
+nodeofactor.Ethnic.3       0.02672    0.44178     NA  0.9518    
+nodeifactor.Ethnic.2       0.05399    0.24846     NA  0.8280    
+nodeifactor.Ethnic.3       0.22061    0.35277     NA  0.5317    
+nodematch.PersonSmoke     -0.39015    0.30250     NA  0.1972    
+nodeifactor.PersonSmoke.2 -0.01342    0.47199     NA  0.9773    
+nodeofactor.PersonSmoke.2  0.36862    0.59009     NA  0.5322    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:     0  on 7140  degrees of freedom
+ Residual Deviance: -2852  on 7119  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -2810    BIC: -2665    (Smaller is better.) 

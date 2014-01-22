@@ -1,0 +1,50 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   mat1 ~ edges + ctriple + mutual + mutual("PersonSmoke") + asymmetric("PersonSmoke") + 
+    gwidegree(fixed = F) + gwodegree(fixed = F) + gwesp(0.25, 
+    fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("Ethnic") + 
+    nodeofactor("Ethnic") + nodeifactor("Ethnic") + nodematch("PersonSmoke") + 
+    nodeifactor("PersonSmoke", base = 1) + nodeofactor("PersonSmoke", 
+    base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                          Estimate Std. Error MCMC %  p-value    
+edges                     -3.44657    0.35816     NA  < 1e-04 ***
+ctriple                   -0.08401    0.07948     NA 0.290584    
+mutual                     2.24935    0.39863     NA  < 1e-04 ***
+mutual.PersonSmoke         3.38199    0.11754     NA  < 1e-04 ***
+asymmetric.PersonSmoke     1.50155    0.15457     NA  < 1e-04 ***
+gwidegree                  0.85102    0.54002     NA 0.115095    
+gwidegree.decay            0.96042    1.07775     NA 0.372884    
+gwodegree                 -2.60744    0.72103     NA 0.000301 ***
+gwodegree.decay           -0.22180    0.22079     NA 0.315152    
+gwesp.fixed.0.25           1.52670    0.12578     NA  < 1e-04 ***
+gwdsp.fixed.0.25          -0.28556    0.02336     NA  < 1e-04 ***
+nodematch.Gender           0.31950    0.12399     NA 0.009990 ** 
+nodeifactor.Gender.2      -0.02946    0.15275     NA 0.847092    
+nodeofactor.Gender.2      -0.13541    0.14885     NA 0.363011    
+nodematch.Ethnic           0.23995    0.08091     NA 0.003029 ** 
+nodeofactor.Ethnic.2      -0.07791    0.15381     NA 0.612502    
+nodeofactor.Ethnic.3      -0.01333    0.11711     NA 0.909370    
+nodeifactor.Ethnic.2       0.16169    0.12772     NA 0.205568    
+nodeifactor.Ethnic.3       0.20100    0.16225     NA 0.215449    
+nodematch.PersonSmoke     -1.20894    0.13474     NA  < 1e-04 ***
+nodeifactor.PersonSmoke.2  0.01752    0.23745     NA 0.941180    
+nodeofactor.PersonSmoke.2  0.48022    0.22541     NA 0.033169 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:     0  on 7140  degrees of freedom
+ Residual Deviance: -2828  on 7118  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -2784    BIC: -2633    (Smaller is better.) 

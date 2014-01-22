@@ -1,0 +1,46 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   mat1 ~ edges + mutual("PersonSmoke") + asymmetric("PersonSmoke") + 
+    gwidegree(fixed = F) + gwodegree(fixed = F) + gwesp(0.25, 
+    fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("MaoPI") + 
+    nodeofactor("MaoPI") + nodeifactor("MaoPI") + nodematch("PersonSmoke") + 
+    nodeifactor("PersonSmoke", base = 1) + nodeofactor("PersonSmoke", 
+    base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                           Estimate Std. Error MCMC %  p-value    
+edges                      -3.85988    0.34630     NA  < 1e-04 ***
+mutual.PersonSmoke        107.17578    0.07526     NA  < 1e-04 ***
+asymmetric.PersonSmoke     52.52721    0.10286     NA  < 1e-04 ***
+gwidegree                   0.94258    0.37748     NA 0.012546 *  
+gwidegree.decay             1.59608    0.26471     NA  < 1e-04 ***
+gwodegree                  -2.05141    0.66081     NA 0.001914 ** 
+gwodegree.decay            -0.22562    0.25772     NA 0.381374    
+gwesp.fixed.0.25            1.74470    0.11800     NA  < 1e-04 ***
+gwdsp.fixed.0.25           -0.25543    0.02638     NA  < 1e-04 ***
+nodematch.Gender            0.41787    0.14404     NA 0.003731 ** 
+nodeifactor.Gender.2       -0.04074    0.16199     NA 0.801445    
+nodeofactor.Gender.2       -0.09495    0.15214     NA 0.532606    
+nodematch.MaoPI             0.26544    0.07094     NA 0.000184 ***
+nodeofactor.MaoPI.2        -0.02237    0.10069     NA 0.824184    
+nodeifactor.MaoPI.2         0.15400    0.12016     NA 0.200008    
+nodematch.PersonSmoke     -52.55449    0.09691     NA  < 1e-04 ***
+nodeifactor.PersonSmoke.2   0.15816    0.21721     NA 0.466554    
+nodeofactor.PersonSmoke.2   0.42192    0.19997     NA 0.034902 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:     0  on 7140  degrees of freedom
+ Residual Deviance: -2812  on 7122  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -2776    BIC: -2652    (Smaller is better.) 

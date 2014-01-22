@@ -1,0 +1,49 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   mat1 ~ edges + dyadcov(dyadic1) + mutual("PersonSmoke") + asymmetric("PersonSmoke") + 
+    gwidegree(fixed = F) + gwodegree(fixed = F) + gwesp(0.25, 
+    fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("MaoPI") + 
+    nodeofactor("MaoPI") + nodeifactor("MaoPI") + nodematch("PersonSmoke") + 
+    nodeifactor("PersonSmoke", base = 1) + nodeofactor("PersonSmoke", 
+    base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                          Estimate Std. Error MCMC %  p-value    
+edges                     -3.74802    0.50508     NA  < 1e-04 ***
+dyadcov.dyadic1.mutual    25.85357    0.22515     NA  < 1e-04 ***
+dyadcov.dyadic1.utri      23.64226    0.14818     NA  < 1e-04 ***
+dyadcov.dyadic1.ltri      23.91631    0.16217     NA  < 1e-04 ***
+mutual.PersonSmoke         1.00428    0.11488     NA  < 1e-04 ***
+asymmetric.PersonSmoke    -0.52631    0.15649     NA 0.000774 ***
+gwidegree                  1.36218    0.46518     NA 0.003419 ** 
+gwidegree.decay            1.08573    0.57168     NA 0.057580 .  
+gwodegree                 -1.97190    0.60178     NA 0.001055 ** 
+gwodegree.decay           -0.25637    0.23585     NA 0.277067    
+gwesp.fixed.0.25           1.36408    0.12833     NA  < 1e-04 ***
+gwdsp.fixed.0.25          -0.31408    0.02768     NA  < 1e-04 ***
+nodematch.Gender          -0.07978    0.23285     NA 0.731878    
+nodeifactor.Gender.2      -0.03685    0.24529     NA 0.880571    
+nodeofactor.Gender.2       0.02898    0.22897     NA 0.899272    
+nodematch.MaoPI            0.12761    0.19097     NA 0.504015    
+nodeofactor.MaoPI.2       -0.39977    0.15299     NA 0.008994 ** 
+nodeifactor.MaoPI.2       -0.15548    0.17705     NA 0.379897    
+nodematch.PersonSmoke      0.78101    0.19035     NA  < 1e-04 ***
+nodeifactor.PersonSmoke.2  0.44254    0.36474     NA 0.225063    
+nodeofactor.PersonSmoke.2  0.78360    0.32452     NA 0.015777 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:     0  on 7140  degrees of freedom
+ Residual Deviance: -4274  on 7119  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -4232    BIC: -4087    (Smaller is better.) 

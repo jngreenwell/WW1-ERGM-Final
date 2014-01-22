@@ -1,0 +1,55 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   mat1 ~ edges + twopath + ctriple + mutual + mutual("PersonDrink") + 
+    asymmetric("PersonDrink") + gwidegree(fixed = F) + gwodegree(fixed = F) + 
+    gwesp(0.25, fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("Ethnic") + 
+    nodeofactor("Ethnic") + nodeifactor("Ethnic") + nodematch("PersonSmoke") + 
+    nodeifactor("PersonSmoke", base = 1) + nodeofactor("PersonSmoke", 
+    base = 1) + nodematch("PersonDrink") + nodeifactor("PersonDrink", 
+    base = 1) + nodeofactor("PersonDrink", base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                           Estimate Std. Error MCMC %  p-value    
+edges                     -3.700407   0.340402     NA  < 1e-04 ***
+twopath                    0.055544   0.037587     NA 0.139512    
+ctriple                   -0.265411   0.139647     NA 0.057397 .  
+mutual                     2.316619   0.376121     NA  < 1e-04 ***
+mutual.PersonDrink         2.819912   0.090913     NA  < 1e-04 ***
+asymmetric.PersonDrink     1.201531   0.143741     NA  < 1e-04 ***
+gwidegree                  0.929201   0.450418     NA 0.039151 *  
+gwidegree.decay            1.113995   0.779857     NA 0.153203    
+gwodegree                 -2.556521   0.696997     NA 0.000246 ***
+gwodegree.decay           -0.191086   0.229281     NA 0.404639    
+gwesp.fixed.0.25           1.501309   0.123369     NA  < 1e-04 ***
+gwdsp.fixed.0.25          -0.328323   0.041434     NA  < 1e-04 ***
+nodematch.Gender           0.327313   0.102500     NA 0.001413 ** 
+nodeifactor.Gender.2      -0.023782   0.151695     NA 0.875425    
+nodeofactor.Gender.2      -0.087781   0.148494     NA 0.554444    
+nodematch.Ethnic           0.251154   0.084668     NA 0.003024 ** 
+nodeofactor.Ethnic.2       0.004598   0.104548     NA 0.964923    
+nodeofactor.Ethnic.3      -0.001643   0.135912     NA 0.990352    
+nodeifactor.Ethnic.2       0.170477   0.128318     NA 0.184040    
+nodeifactor.Ethnic.3       0.189997   0.137194     NA 0.166131    
+nodematch.PersonSmoke      0.264916   0.164350     NA 0.107028    
+nodeifactor.PersonSmoke.2 -0.336703   0.245623     NA 0.170476    
+nodeofactor.PersonSmoke.2  0.284547   0.276750     NA 0.303902    
+nodematch.PersonDrink     -1.209997   0.117502     NA  < 1e-04 ***
+nodeifactor.PersonDrink.2  0.255914   0.182741     NA 0.161431    
+nodeofactor.PersonDrink.2  0.080947   0.189698     NA 0.669601    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:     0  on 7140  degrees of freedom
+ Residual Deviance: -2850  on 7114  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -2798    BIC: -2619    (Smaller is better.) 
